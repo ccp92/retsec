@@ -10,5 +10,23 @@ RSpec.describe Retsec do
         expect(Retsec.convert("secret")).to eql("retsec")
       end
     end
+
+    describe "given the string code" do
+      it "returns deco" do
+        expect(Retsec.convert("code")).to eql("deco")
+      end
+    end
+
+    describe "given the string warplane" do
+      it "returns lanewarp" do
+        expect(Retsec.convert("warplane")).to eql("lanewarp")
+      end
+    end
+
+    describe "given the string antidisestablishmentarianism" do
+      it "returns shmentarianismantidisestabli" do
+        expect(Retsec.convert("antidisestablishmentarianism")).to eql("shmentarianismantidisestabli")
+      end
+    end
   end
 end
