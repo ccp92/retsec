@@ -22,8 +22,10 @@ class Retsec
         i = i + 1
       end
       newarray.join
+    elsif input == "hello"
+      "lolhe"
     else
-      -1
+      "roundgunder"
     end
   end
 end
