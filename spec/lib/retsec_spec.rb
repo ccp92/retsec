@@ -13,20 +13,30 @@ RSpec.describe Retsec do
 
     describe "given the string code" do
       it "returns deco" do
-        expect(Retsec.convert("code")).to eql("deco")
+        convert("code", "deco")
       end
     end
 
     describe "given the string warplane" do
       it "returns lanewarp" do
-        expect(Retsec.convert("warplane")).to eql("lanewarp")
+        convert("warplane", "lanewarp")
       end
     end
 
     describe "given the string antidisestablishmentarianism" do
       it "returns shmentarianismantidisestabli" do
-        expect(Retsec.convert("antidisestablishmentarianism")).to eql("shmentarianismantidisestabli")
+        convert("antidisestablishmentarianism", "shmentarianismantidisestabli")
       end
     end
+  end
+
+  context "returning a string with odd digits" do
+    
+  end
+
+  private
+
+  def convert(input, output)
+    expect(Retsec.convert(input)).to eql(output)
   end
 end
